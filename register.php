@@ -81,11 +81,7 @@ function veriflogin($otp, $token)
 	}
 function claim($token)
 	{
-	$data = '{"promo_code":"JAJANPAKEGOPAY"}';
-        $data = '{"promo_code":"GOFOODBOBA07"}';
-        $data = '{"promo_code":"GOFOODBOBA19"}';
-        $data = '{"promo_code":"GOFOODPASTA07"}';
-        $data = '{"promo_code":"GOFOODPASTA19"}';
+	$data = '{"promo_code":"GOFOODBOBA07"}';
 	$claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
 	if ($claim['success'] == 1)
 		{
